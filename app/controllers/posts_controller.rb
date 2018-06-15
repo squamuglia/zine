@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :show, :delete]
 
+  def welcome
+    render :welcome
+  end
+  
   def index
     @posts = Post.all
   end

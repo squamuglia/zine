@@ -7,9 +7,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="nav f">
+        <h3 class="s4 fll mt1 ml1 fa"><%= link_to 'Chapbook', posts_path, class:'no-under' %></h3>
+        <ul class="mt1 mr1 fa ar">
+          <li><%= link_to 'Home', posts_path %></li>
+          <li><%= link_to 'Writers', users_path %></li>
+          <li><%= link_to 'Content', posts_path %></li>
+        </ul>
+    </div>
+    <div class="container px1">
+      <%= yield %>
+    </div>
   </body>
 </html>

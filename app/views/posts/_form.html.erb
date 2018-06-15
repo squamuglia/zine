@@ -13,9 +13,12 @@
           </ul>
       </div>
     <% end %>
-    <%= f.submit %>
+      <br>
+        <%= f.label :title %><%= f.submit class:'flr' %><br>
+        <%= f.text_field :title, class:'x mb1' %><br>
 
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-        <%= f.text_area :body %>
+        <%= f.label :body %><br>
+        <%= f.hidden_field :body, id: :post_body %>
+        <trix-editor input="post_body"></trix-editor>
+        <%= f.submit class:'flr mt1' %>
 <% end %>

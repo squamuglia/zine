@@ -1,4 +1,5 @@
 <h1><%= @post.title %></h2>
 <p><%= link_to @post.user.name, user_path(@post.user) %> | <%= link_to 'Edit', "#{@post.id}/edit" %></p>
-
-<p><%= @post.body %></p>
+<div class="post-body">
+  <%= sanitize @post.body %>
+</div>

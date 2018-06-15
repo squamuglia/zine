@@ -1,0 +1,4 @@
+.trix-editor, trix-toolbar .button_group {
+    border-radius: 0px;
+    border: 1px solid #000;
+}

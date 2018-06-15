@@ -1,5 +1,7 @@
+<h2 class="mb1">Writing</h2>
 <ol>
   <% @posts.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <li><%= link_to post.title, post %> | <%= link_to post.user.name, post.user %></li>
+
   <% end %>
 </ol>

@@ -1,4 +1,6 @@
-<h1><%= @user.name %></h2>
+<h1 class="mb1"><%= @user.name %></h1>
+<ul>
   <% @user.posts.each do |post| %>
     <li><%= link_to post.title, post %></li>
   <% end %>
+</ul>
